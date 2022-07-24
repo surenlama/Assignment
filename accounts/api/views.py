@@ -6,12 +6,12 @@ from accounts.api.serializers import (
 
 )
 
-#Create user
+#Create user(Addtional feature)
 class UserCreateAPIView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserCreateSerialzier
 
-#View user
+#View user(Addtional feature)
 class UserListAPIView(ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserListSerialzier

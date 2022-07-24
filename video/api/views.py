@@ -18,7 +18,7 @@ def convert(seconds):
     seconds %= 60
     return hours, mins, seconds
 
-#Created video and performcreatef function will get totalprice
+#Created video and  perform_create function will provide totalprice
 class VideoCreateAPi(CreateAPIView):
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
@@ -59,14 +59,14 @@ class VideoListAPi(ListAPIView):
     permission_classes = [IsAuthenticated]
 
     
-#Create comment of the video    
+#Create comment of the video(Additional feature)   
 class CommentCreateAPi(CreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [IsAuthenticated] 
 
 
-#List comment of the video
+#List comment of the video(Additional feature)
 class CommentListAPi(ListAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
