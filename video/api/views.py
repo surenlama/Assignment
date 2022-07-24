@@ -27,7 +27,7 @@ class VideoCreateAPi(CreateAPIView):
     def perform_create(self, serializer):
         obj =serializer.save(createdby=self.request.user)
         charges=0
-        video = moviepy.editor.VideoFileClip("/home/suren/Desktop/suren/assignment/media/video/LAURE_Ft._AIDRAY-ROHIT_SHAKYA_-_Dui_Rupaiyan_OFFICIAL_MOVIE_SONG1_n95VLqN.mp4")
+        video = moviepy.editor.VideoFileClip("your video path")
         video_duration = int(video.duration)
         hours, mins, secs = convert(video_duration)     
         print("Hours:", hours)
