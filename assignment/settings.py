@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     "rest_framework.authtoken", 
     "video", 
     "accounts",
+    'drf_messages',    
 ]
-
+MESSAGE_STORAGE = "drf_messages.storage.DBStorage"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "corsheaders.middleware.CorsMiddleware",

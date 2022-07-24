@@ -7,12 +7,12 @@ from accounts.api.serializers import (
 
 )
 
-
+#Create user
 class UserCreateAPIView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserCreateSerialzier
 
-
+#View user
 class UserListAPIView(ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserListSerialzier

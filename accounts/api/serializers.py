@@ -18,6 +18,7 @@ class UserCreateSerialzier(serializers.ModelSerializer):
         user.save()
         return user
 
+
 class UserListSerialzier(serializers.ModelSerializer):
     class Meta:
         model = User

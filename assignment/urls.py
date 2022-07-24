@@ -23,9 +23,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/accounts/', include('accounts.api.urls')),
-    path('api/v1/video/', include('video.api.urls')),
-    path('auth/',include('rest_framework.urls',namespace='rest_framework')),
-    path("api/v1/dj-rest-auth/", include("dj_rest_auth.urls")),
+    path('api/v1/', include('video.api.urls')),
+    path('messages/', include('drf_messages.urls')),  
 
 
 ]
