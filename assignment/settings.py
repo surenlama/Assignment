@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken", 
     "video", 
     "accounts",
-    'drf_messages',    
+    'drf_messages',   
 ]
 MESSAGE_STORAGE = "drf_messages.storage.DBStorage"
 MIDDLEWARE = [

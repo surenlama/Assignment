@@ -8,7 +8,6 @@ class Video(models.Model):
     caption = models.CharField(max_length=250)
     video = models.FileField(upload_to="video/%y",validators=[file_size,validate_file_extension,file_length])
     dateofupload = models.DateField(null=True)
-    createdby = models.ForeignKey(User,on_delete=models.CASCADE)
     def __str__(self):
         return self.caption
 

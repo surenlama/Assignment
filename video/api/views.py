@@ -27,7 +27,7 @@ class VideoCreateAPi(CreateAPIView):
     def perform_create(self, serializer):
         obj =serializer.save(createdby=self.request.user)
         charges=0
-        video = moviepy.editor.VideoFileClip("your video path")
+        video = moviepy.editor.VideoFileClip("/home/suren/Desktop/suren/assignment/media/video/LAURE Ft. AIDRAY-ROHIT SHAKYA - Dui Rupaiyan [OFFICIAL MOVIE SONG](1).mp4")
         video_duration = int(video.duration)
         hours, mins, secs = convert(video_duration)     
         print("Hours:", hours)
@@ -49,9 +49,10 @@ class VideoCreateAPi(CreateAPIView):
         else:
             pass
         print(charges)
-        messages.info(self, f'Your total charges {charges}') 
+        messages.info(self.request, f'Your total charges {charges}') 
 
-#Listing video        
+
+#Video will display accoring to the date of upload   
 class VideoListAPi(ListAPIView):
     queryset =   Video.objects.filter(dateofupload__lte=datetime.datetime.now().date())
     serializer_class = VideoListSerializer
